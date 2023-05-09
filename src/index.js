@@ -1,10 +1,22 @@
 import _ from 'lodash';
+import './style.css';
+import Data from './data.xml';
+import Notes from './data.csv';
+import image from './favicon.svg'
+
 function component() {
     const element = document.createElement('div');
 
-    // - lodash（首先是在index.html里通过一个 script 引入）对于执行这一行是必需的
-    // + lodash目前通过import引入
     element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.classList.add('hello');
+
+
+    const myIcon = new Image();
+    myIcon.src = image;
+    element.appendChild(myIcon);
+
+    console.log(Data);
+    console.log(Notes);
 
     return element;
 }
