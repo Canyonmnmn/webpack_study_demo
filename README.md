@@ -1,2 +1,5 @@
-执行npx webpack 会讲我们的脚本src/index.js作为**入口起点**，也会生成
-dist/main.js作为**输出**
+## rollup打包工具
+打包命令：`rollup src/main.js -f cjs`
+-f 选项指定了产物的类型 因为没有指定输出文件 所以是直接打印在控制台上
+
++ `-o bundle.js`
